@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Survey - George Mason University</title>
+    <link href="p22.css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="gmu-header">
+                <h1>CS Department Survey</h1>
+            </div>
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="username" class="required">Username</label>
+                        <input type="text" id="username" name="username" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="required">Street Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city" class="required">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state" class="required">State</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zip" class="required">ZIP Code</label>
+                        <input type="text" id="zip" name="zip" required pattern="[0-9]{5}" placeholder="12345">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="required">Telephone</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="123-456-7890">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="url">Website URL</label>
+                        <input type="url" id="url" name="url" placeholder="https://www.example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="surveyDate" class="required">Date of Survey</label>
+                        <input type="date" id="surveyDate" name="surveyDate" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>What did you like most about the campus?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="likes" value="students"> Students</label>
+                            <label><input type="checkbox" name="likes" value="location"> Location</label>
+                            <label><input type="checkbox" name="likes" value="campus"> Campus</label>
+                            <label><input type="checkbox" name="likes" value="atmosphere"> Atmosphere</label>
+                            <label><input type="checkbox" name="likes" value="dorm-rooms"> Dorm Rooms</label>
+                            <label><input type="checkbox" name="likes" value="sports"> Sports</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>How did you become interested in the university?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="interest" value="friends"> Friends</label>
+                            <label><input type="radio" name="interest" value="television"> Television</label>
+                            <label><input type="radio" name="interest" value="internet"> Internet</label>
+                            <label><input type="radio" name="interest" value="other"> Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="graduationMonth">High School Graduation Month</label>
+                        <input type="text" id="graduationMonth" name="graduationMonth" list="months">
+                        <datalist id="months">
+                            <option value="January">
+                            <option value="February">
+                            <option value="March">
+                            <option value="April">
+                            <option value="May">
+                            <option value="June">
+                            <option value="July">
+                            <option value="August">
+                            <option value="September">
+                            <option value="October">
+                            <option value="November">
+                            <option value="December">
+                        </datalist>
+                    </div>
+                    <div class="form-group">
+                        <label for="graduationYear">High School Graduation Year</label>
+                        <input type="text" id="graduationYear" name="graduationYear" placeholder="YYYY" pattern="[0-9]{4}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="recommendation">Likelihood of recommending this school</label>
+                    <select id="recommendation" name="recommendation">
+                        <option value="">Select an option</option>
+                        <option value="Very Likely">Very Likely</option>
+                        <option value="Likely">Likely</option>
+                        <option value="Unlikely">Unlikely</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Survey</button>
+                </div>
+            </form>
+            <div class="navigation-buttons">
+                <a href="p21.html" class="nav-button">CS Department</a>
+                <a href="p1.html" class="nav-button">About Me</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
